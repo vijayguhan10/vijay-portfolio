@@ -19,12 +19,13 @@ const AboutMe = () => {
           </h2>
 
           <p className="text-gray-600 mt-8 leading-relaxed">
-            I am Kayal Ennian A G, passionate about AI and ML technologies. As a
-            leader in my college's CSE (AI & ML) department and President of our
-            AI and ML club, I am dedicated to fostering innovation and
-            knowledge-sharing. My journey includes multiple patents, awards in
-            hackathons, and a commitment to leveraging AI for impactful
-            innovation in technology.
+            I am Vijay Guhan K M, a passionate software developer with hands-on
+            experience in building ERP solutions and microservices
+            architectures. As the Lead for CIR International Relations, I
+            actively mentor and guide over 200 junior students, helping them
+            grow in their careers and technical skills. I am dedicated to
+            creating impactful software solutions and fostering a collaborative
+            learning environment within my teams and the wider tech community.
           </p>
 
           <div className="mt-8 flex space-x-4">

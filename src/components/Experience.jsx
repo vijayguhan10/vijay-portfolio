@@ -10,11 +10,12 @@ const logos = {
   karpagam: "https://www.karpagaresearch.com/assets/img/logo.png",
   srm: "https://www.srmist.edu.in/wp-content/uploads/2023/01/srm-logo.png",
   svce: "https://svce.ac.in/wp-content/themes/svce/assets/img/logo.png",
-  sriEshwar: "https://sece.ac.in/wp-content/uploads/2022/09/logo-sece.png",
-  magma: "https://www.srmist.edu.in/wp-content/uploads/2023/01/srm-logo.png",
-  quickBus: "https://quickbus.com/logo.png",
+  sriEshwar:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBNrhOdasEW-nw2QGWfW8p61_zk0lGWcr-P960hBTvbvgroYQblgEQA3fyIs98GFCU6pQ&usqp=CAU",
+  gilbarco:
+    "https://www.gilbarco.com/us/sites/gilbarco.com.us/themes/gvr_v3_us/logo.svg",
+  isaii: "https://framerusercontent.com/images/Xqva2SIUa2CAXuGIcHtb2NFUAVM.png",
 };
-
 const techStack = [
   {
     name: "C++",
@@ -42,19 +43,19 @@ const techStack = [
   },
   {
     name: "Express",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    logo: "https://www.edureka.co/blog/wp-content/uploads/2019/07/express-logo.png",
   },
   {
-    name: "Express",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    name: "React Native",
+    logo: "https://cink.es/wp-content/uploads/2024/02/react-native-apps-jpg-1.webp",
   },
   {
-    name: "Express",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    name: "Tailwind CSS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
   },
   {
-    name: "Express",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    name: "AWS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/800px-Amazon_Web_Services_Logo.svg.png",
   },
 ];
 
@@ -62,24 +63,24 @@ const Experience = () => {
   const workExperience = [
     {
       icon: <FaBriefcase className="text-amber-500" />,
-      role: "Flutter Developer",
-      company: "Magma",
-      period: "Aug 2020 - Oct 2022",
-      logo: logos.magma,
+      role: "Software Developer (LeaveEase)",
+      company: "Gilbarco Veeder-Root Pvt Ltd",
+      period: "2024",
+      logo: logos.gilbarco,
       description:
-        "Developed cross-platform mobile applications using Flutter and integrated Firebase for backend services.",
-      skills: ["Flutter", "Dart", "Firebase"],
+        "Developed a Leave Management Software that automated the entire leave cycle, from application to manager approval, ensuring efficient tracking and streamlined workflows.",
+      skills: ["React.js", "MongoDB", "Node.js", "Express.js"],
       color: "bg-amber-500",
     },
     {
       icon: <FaBriefcase className="text-blue-500" />,
-      role: "Full Stack Developer",
-      company: "QuickBus",
-      period: "Mar 2019 - May 2020",
-      logo: logos.quickBus,
+      role: "Mobile App Developer (Isaii Ai)",
+      company: "Isaii Ai",
+      period: "2025",
+      logo: logos.isaii,
       description:
-        "Built scalable web applications using React and Node.js, and managed databases with MongoDB.",
-      skills: ["React", "Node.js", "MongoDB"],
+        "Developed a feature-rich trip booking and management application using React Native, allowing users to seamlessly plan journeys, make reservations, and coordinate their trips in a unified platform.",
+      skills: ["React Native", "Node.js", "Express.js", "MongoDB"],
       color: "bg-blue-500",
     },
     {
@@ -95,13 +96,17 @@ const Experience = () => {
     },
     {
       icon: <FaUsers className="text-green-500" />,
-      role: "President of CSE(AI-ML)",
+      role: "Center for International Relations - Student Lead, Student Affairs",
       company: "Sri Eshwar College of Engineering",
       period: "Jun 2021 - Present",
       logo: logos.sriEshwar,
       description:
-        "Led the AI/ML department, organized events, and managed teams to foster innovation and collaboration.",
-      skills: ["AI/ML", "Team Management", "Event Organization"],
+        "Led the Center for International Relations as Student Lead, managing student affairs, organizing events, and fostering global collaborations.",
+      skills: [
+        "International Relations",
+        "Student Affairs",
+        "Event Organization",
+      ],
       color: "bg-green-500",
     },
   ];
@@ -177,7 +182,7 @@ const Experience = () => {
                       <img
                         src={exp.logo}
                         alt={`${exp.company} logo`}
-                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cntain shadow-md"
                       />
                       <div>
                         <h3 className="font-bold text-base sm:text-lg">

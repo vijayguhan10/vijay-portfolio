@@ -6,45 +6,61 @@ import {
   FaUserGraduate,
   FaChalkboardTeacher,
   FaFileAlt,
+  FaAward,
+  FaRocket,
+  FaStar,
+  FaLightbulb,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const achievements = [
   {
-    icon: <FaMedal className="text-3xl text-amber-500" />,
-    title: "Top 6 at Smart India Hackathon",
-    subtitle: "Cloud and Mobile App Innovative Solutions",
-    desc: "Recognized for developing a cutting-edge solution during a national hackathon.",
+    icon: <FaFileAlt className="text-3xl text-blue-500" />,
+    title: "Published 2* Patents",
+    subtitle: "Software Development under SDG goals",
+    desc: "Published two patents in software development, contributing to the United Nations Sustainable Development Goals.",
   },
   {
     icon: <FaTrophy className="text-3xl text-yellow-500" />,
-    title: "1st Place in National Agricultural Hackathon",
-    subtitle: "AI in Agriculture\nMachine Learning Innovations",
-    desc: "Created a machine learning solution for smart agriculture.",
+    title: "Best Innovator – International Startup TN Hackathon",
+    subtitle: "Awarded for Groundbreaking Solutions",
+    desc: "Recognized as Best Innovator at the International Startup TN Hackathon for delivering impactful and innovative solutions.",
   },
   {
     icon: <FaCrown className="text-3xl text-yellow-400" />,
-    title: "Best Student Researcher 2023",
-    subtitle: "SECE Awards\nResearch Excellence",
-    desc: "Awarded for outstanding research contributions in the field of AI and ML.",
+    title: "Youngest Entrepreneur & Top Software Developer",
+    subtitle: "Excellence in Technology & Innovation",
+    desc: "Honored as the Youngest Entrepreneur and Top Software Developer for outstanding achievements in technology and innovation.",
   },
   {
-    icon: <FaFileAlt className="text-3xl text-gray-600" />,
-    title: "Best Paper at 15th International Conference",
-    subtitle: "Cancer Detection\nUzbekistan 2023",
-    desc: "Presented pioneering research on using ML techniques for cancer detection.",
+    icon: <FaChalkboardTeacher className="text-3xl text-green-500" />,
+    title: "Mentored 300+ Students",
+    subtitle: "MERN Stack Development",
+    desc: "Mentored over 300 students in MERN stack development, empowering the next generation of developers.",
+  },
+  {
+    icon: <FaMedal className="text-3xl text-gray-700" />,
+    title: "Dr. APJ Abdul Kalam Silver Innovator – 2024",
+    subtitle: "National Recognition",
+    desc: "Received the Dr. APJ Abdul Kalam Silver Innovator award in 2024 for exceptional innovation.",
+  },
+  {
+    icon: <FaUserGraduate className="text-3xl text-purple-500" />,
+    title: "Best Student Researcher – 2023",
+    subtitle: "Academic Excellence",
+    desc: "Honored as the Best Student Researcher of 2023 for outstanding research contributions.",
   },
   {
     icon: <FaTrophy className="text-3xl text-pink-400" />,
-    title: "1st Place in National Cancer Hackathon",
-    subtitle: "Innovative Cancer Solutions",
-    desc: "Developed a novel approach for cancer detection using AI.",
+    title: "Winner of 3+ Hackathons",
+    subtitle: "National Competitions (2023 & 2024)",
+    desc: "Achieved top positions in more than four hackathons and internationally recognized competitions.",
   },
   {
-    icon: <FaCrown className="text-3xl text-yellow-400" />,
-    title: "President of CSE (AI & ML) Department",
-    subtitle: "Leadership Role",
-    desc: "Led the department, organized events, and mentored students.",
+    icon: <FaStar className="text-3xl text-amber-500" />,
+    title: "Best Frontend Developer",
+    subtitle: "24-hour Hackathon",
+    desc: "Winner of Best Frontend Developer for exceptional UI/UX expertise at a 24-hour hackathon.",
   },
 ];
 
@@ -55,9 +71,8 @@ export default function Achievements() {
         Achievements.
       </h2>
       <p className="text-lg text-gray-700 mb-12 max-w-3xl">
-        I have earned multiple accolades in AI and ML competitions. My
-        achievements showcase my dedication to pushing the boundaries of
-        technology and delivering impactful solutions.
+        My journey is marked by innovation, leadership, and a passion for
+        empowering others through technology and education.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {achievements.map((ach, idx) => (
@@ -87,17 +102,6 @@ export default function Achievements() {
               {ach.subtitle}
             </div>
             <div className="text-gray-600 mb-3">{ach.desc}</div>
-            {ach.link && (
-              <a
-                href={ach.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-base font-semibold text-gray-900 bg-gradient-to-r from-yellow-200 to-yellow-400 rounded-full px-4 py-2 shadow group-hover:bg-yellow-100 transition"
-              >
-                <FaFileAlt className="text-xl" />
-                {ach.linkText}
-              </a>
-            )}
             {/* Glowing border effect */}
             <div
               className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition duration-300"

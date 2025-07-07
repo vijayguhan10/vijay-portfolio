@@ -31,53 +31,54 @@ const techIcons = {
 const Projects = () => {
   const projectsData = [
     {
-      title: "ONCULUS DETECTA",
+      title: "InvoTrack",
       description:
-        "The AI-driven system analyzes 10,000+ pathological images, identifying cancerous lesions with 85% accuracy and enhancing diagnostic efficiency. This empowers healthcare professionals with timely insights, improving patient care by enabling 30% faster decision-making in diagnosis and treatment.",
+        "Developed an in-house billing management software that automates billing, tracks customers, manages inventory, enables email marketing, and supports secure online transactions for seamless business operations.",
       image: placeholderImage1,
-      techs: ["Python", "TensorFlow", "React", "Flask"],
-      link: "/projects/onculus-detecta",
+      techs: ["React", "Node", "Express", "MongoDB"],
+      link: "https://github.com/yourusername/invotrack",
     },
     {
-      title: "ANIDER (ECO-WATCH)",
+      title: "EventSync",
       description:
-        "Developed a nonlethal animal monitoring and deterrent system that secured 1st place at the National Hackathon hosted by the Tamil Nadu Government, showcasing expertise in sustainable farming practices and contributing to a greener agricultural future.",
+        "Developed an end-to-end event management software that streamlines the entire event lifecycle, from planning to execution. The system includes essential forms for event details, amenities, communication, transport, branding, and guest room booking, ensuring seamless coordination and tracking.",
       image: placeholderImage2,
-      techs: ["Python", "TensorFlow", "Arduino"],
-      link: "/projects/anider-eco-watch",
+      techs: ["React", "Node", "Express", "MongoDB"],
+      link: "https://github.com/yourusername/eventsync",
     },
     {
-      title: "FLORA X",
+      title: "LeadFlow CRM",
       description:
-        "Created an AI-driven botanical app that transformed plant management by providing precise identification, cultivation guidance, and disease diagnosis for over 1,500 plant species.",
+        "Developed a Lead Management System to streamline lead marketing, tracking, and follow-up. Features include lead categorization (cold, warm, hot), WhatsApp marketing, file upload via Cloudinary, and role-specific access for Super Admin, Admin, and Telecallers — empowering efficient lead conversion.",
       image: placeholderImage3,
-      techs: ["React", "TensorFlow", "Flask"],
-      link: "/projects/flora-x",
+      techs: ["React", "Node", "Express", "MongoDB"],
+      link: "https://github.com/yourusername/leadflow-crm",
     },
     {
-      title: "ADHIKAAR",
+      title: "LeaveEase",
       description:
-        "Integrated advanced reporting tools for real-time insights into contract statuses, improving efficiency. Launched a mobile app for users to access contract information and procurement updates instantly.",
+        "Developed a Leave Management Software for Gilbarco Veeder-Root Pvt Ltd, automating the leave cycle from application to approval. The system featured real-time status tracking and WhatsApp integration for leave management.",
       image: placeholderImage4,
-      techs: ["React", "JS", "Node", "MongoDB"],
-      link: "/projects/adhikaar",
+      techs: ["React", "Node", "Express", "MongoDB"],
+      link: "https://github.com/yourusername/leaveease",
     },
     {
-      title: "NPM Package kayal",
+      title: "Visitor Management",
       description:
-        "A personal NPM package showcasing my projects and skills, enabling easy integration of my work into any development environment. Perfect for developers looking to leverage innovative solutions and expertise in AI and ML.",
+        "A robust visitor management system for secure check-in, visitor tracking, and real-time notifications, enhancing workplace security and visitor experience.",
       image: placeholderImage5,
-      techs: ["JS"],
-      link: "/projects/npm-package-kayal",
+      techs: ["React", "Node", "Express", "MongoDB"],
+      link: "https://github.com/yourusername/visitor-management",
     },
     {
-      title: "THC - MEDUSA",
+      title: "Revozen - Tyre Fitment Center",
       description:
-        "An AI-powered medical chatbot using Grog, providing real-time symptom analysis and personalized health advice to empower informed healthcare decisions.",
+        "Comprehensive tyre management and fitment center software for inventory, customer tracking, and service scheduling, streamlining operations for automotive businesses.",
       image: placeholderImage6,
-      techs: ["Python", "TensorFlow"],
-      link: "/projects/thc-medusa",
+      techs: ["React", "Node", "Express", "MongoDB"],
+      link: "https://github.com/yourusername/revozen-tyre-fitment",
     },
+  
   ];
 
   return (

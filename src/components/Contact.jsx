@@ -1,6 +1,7 @@
 import React from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-export  function Contact() {
+export function Contact() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-white via-gray-50 to-blue-50">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-16 py-20 px-4 md:px-16 lg:px-32">
@@ -16,18 +17,16 @@ export  function Contact() {
           </p>
           <div className="mb-6">
             <div className="mb-2 text-gray-500 font-semibold">Phone</div>
-            <div className="mb-4 text-gray-900 font-medium">
-              +1 (555) 534-093-762
-            </div>
+            <div className="mb-4 text-gray-900 font-medium">+91 8438434868</div>
             <div className="mb-2 text-gray-500 font-semibold">Email</div>
             <div className="mb-4 text-gray-900 font-medium">
-              hello@company.com
+              vijayguhan10@gmail.com
             </div>
-            <div className="mb-2 text-gray-500 font-semibold">Office</div>
+            <div className="mb-2 text-gray-500 font-semibold">Location</div>
             <div className="text-gray-900 font-medium">
-              230 Norman Street New York,
+              Vaalkadu, Vaaikkalpattari, po, Allikuttai,
               <br />
-              QC (USA) H8R 1A1
+              Salem, Tamil Nadu 636017
             </div>
           </div>
         </div>
@@ -57,13 +56,13 @@ export  function Contact() {
               </div>
               <input
                 type="email"
-                placeholder="yourname@company.com"
+                placeholder="vijayguhan10@gmail.com"
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-blue-200 outline-none transition"
                 required
               />
               <input
                 type="tel"
-                placeholder="+1 (555) 444-0000"
+                placeholder="+91 8438434868"
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:ring-2 focus:ring-blue-200 outline-none transition"
               />
               <textarea
@@ -83,31 +82,31 @@ export  function Contact() {
         </div>
       </div>
       {/* Footer */}
-      <footer className="w-full bg-gray-900 text-gray-100 py-8 px-4 mt-12">
+      <footer className="w-full bg-gradient-to-r from-[#181823] via-[#232526] to-[#0f2027] text-gray-100 py-8 px-4 mt-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-lg font-bold tracking-wide">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Vijay Guhan KM. All rights reserved.
           </div>
-          <div className="flex gap-6 text-gray-400 text-base">
+          <div className="flex gap-6 text-gray-300 text-base">
             <a
-              href="mailto:hello@company.com"
-              className="hover:text-white transition"
+              href="tel:+918438434868"
+              className="hover:text-[#ffd700] transition flex items-center gap-2"
             >
-              Email
+              <FaPhoneAlt /> Phone
             </a>
             <a
-              href="tel:+1555534093762"
-              className="hover:text-white transition"
+              href="mailto:vijayguhan10@gmail.com"
+              className="hover:text-[#ffd700] transition flex items-center gap-2"
             >
-              Phone
+              <FaEnvelope /> Email
             </a>
             <a
-              href="https://maps.google.com"
+              href="https://maps.google.com/?q=Vaalkadu, Vaaikkalpattari, po, Allikuttai, Salem, Tamil Nadu 636017"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition"
+              className="hover:text-[#ffd700] transition flex items-center gap-2"
             >
-              Location
+              <FaMapMarkerAlt /> Location
             </a>
           </div>
         </div>
