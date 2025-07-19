@@ -22,7 +22,7 @@ const techIcons = {
   Node: FaNodeJs,
   MongoDB: SiMongodb,
   Arduino: SiArduino,
-  Express: FaNodeJs,
+  Express: FaNodeJs,                    
 };
 
 const projectsData = [

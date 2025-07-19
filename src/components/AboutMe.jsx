@@ -30,7 +30,7 @@ const AboutMe = () => {
 
           <div className="mt-8 flex space-x-4">
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/vijay-guhan-728299283/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#0077b5] text-2xl hover:scale-110 transition-transform"
@@ -38,7 +38,7 @@ const AboutMe = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/vijayguhan10"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-800 text-2xl hover:scale-110 transition-transform"
