@@ -17,8 +17,7 @@ function App() {
       <Experience />
       <Achievements />
       <Gallery />
-      <Contact/>
-      {/* Add more components as needed */}
+      <Contact />
     </div>
   );
 }
