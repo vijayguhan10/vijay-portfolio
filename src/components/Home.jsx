@@ -50,13 +50,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+    <div className="sm:mt-3  xl:mt-20 flex flex-col justify-center items-center bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-40 h-40 sm:w-72 sm:h-72 bg-blue-100 rounded-full filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-56 h-56 sm:w-96 sm:h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
 
-      <div className=" text-center relative z-10 px-2 xs:px-4 sm:px-4 md:px-0 w-full max-w-3xl">
-        <div className="text-[1rem] xs:text-[1.1rem] sm:text-[1.3rem] text-gray-600 font-medium tracking-wider mb-2 flex items-center justify-center">
+        <div className="text-[1rem] xs:text-[1.1rem] sm:text-[1.3rem] text-gray-600 font-medium tracking-wider flex items-center justify-center">
           LET'S BUILD SOMETHING TOGETHER
           <span
             role="img"
@@ -71,7 +69,7 @@ const Home = () => {
           Hi, I'm{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-black">
             VIJAY GUHAN
-          </span>{" "}
+          </span>
           <span
             role="img"
             aria-label="waving hand"
@@ -138,7 +136,7 @@ const Home = () => {
         </div>
 
         {/* Download Resume Button */}
-        <div className="mt-6 flex justify-center">
+        <div className="mt-6 mb-20 flex justify-center">
           <a
             href="https://drive.google.com/uc?export=download&id=1qOYVSDADpW8gxs-Tn4iUebMsVdVW9KIC"
             className="bg-black hover:bg-grey-800 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all duration-200 text-base sm:text-lg"
@@ -150,11 +148,6 @@ const Home = () => {
           </a>
         </div>
       </div>
-
-      <div className="fixed left-4 xs:left-6 sm:left-8 bottom-4 xs:bottom-6 sm:bottom-8 text-[2rem] xs:text-[2.2rem] sm:text-[2.5rem] select-none animate-pulse z-20">
-      
-      </div>
-    </div>
   );
 };
 

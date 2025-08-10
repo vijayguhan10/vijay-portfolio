@@ -73,7 +73,7 @@ const AboutMe = () => {
           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-64 sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden flex items-center justify-center">
             <img
               src={profileImage}
-              alt="Kayal Ennian A G"
+              alt="Vijay Guhan"
               className="rounded-br-[10%] rounded-tl-[10%] w-[70%] h-full "
             />
             <div className="absolute inset-0 to-transparent"></div>
@@ -88,29 +88,8 @@ const AboutMe = () => {
         </span>
       </div>
 
-      {/* Scroll to top button */}
-      <div className="fixed right-4 sm:right-8 bottom-4 sm:bottom-8">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition duration-300"
-          aria-label="Scroll to top"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
-        </button>
-      </div>
+   
+      
     </div>
   );
 };
