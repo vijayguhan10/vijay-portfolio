@@ -50,7 +50,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="sm:mt-3  xl:mt-20 flex flex-col justify-center items-center bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+    <div className="sm:mt-3  xl:mt-20 flex flex-col justify-center items-center relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-40 h-40 sm:w-72 sm:h-72 bg-blue-100 rounded-full filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
 
