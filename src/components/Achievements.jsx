@@ -54,7 +54,7 @@ const achievements = [
     icon: <FaTrophy className="text-3xl text-pink-400" />,
     title: "Winner of 3+ Hackathons",
     subtitle: "National Competitions (2023 & 2024)",
-    desc: "Achieved top positions in more than four hackathons and internationally recognized competitions.",
+    desc: "Achieved top positions in more than four hackathons and internationally recognized Competetions.",
   },
   {
     icon: <FaStar className="text-3xl text-amber-500" />,
