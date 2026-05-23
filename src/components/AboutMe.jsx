@@ -66,7 +66,7 @@ const AboutMe = () => {
         </div>
 
         {/* Right image section - responsive */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        {/* <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-64 sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden flex items-center justify-center mono-card">
             <img
               src={profileImage}
@@ -74,7 +74,7 @@ const AboutMe = () => {
               className="mono-media rounded-br-[10%] rounded-tl-[10%] w-[70%] h-full"
             />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="mono-shell pb-8">

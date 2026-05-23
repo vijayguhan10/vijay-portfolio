@@ -25,7 +25,7 @@ function App() {
         <Blog />
         <Experience />
         <Achievements />
-        <Gallery />
+        {/* <Gallery /> */}
         <Fun />
         <Contact />
       </main>

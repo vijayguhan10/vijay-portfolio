@@ -105,14 +105,19 @@ export default function OpenSource() {
         <div className="mt-10 mono-card-soft p-7">
           <div className="flex items-center justify-between gap-4 flex-wrap">
             <div>
-              <div className="text-lg font-semibold">Open-source ecosystems</div>
+              <div className="text-lg font-semibold">
+                Open-source ecosystems
+              </div>
               <div className="mt-1 mono-muted text-sm">
                 Things I actively study, build small experiments around, and aim
                 to contribute to over time.
               </div>
             </div>
             <span className="mono-pill">
-              <span className="accent-dot accent-dot--orange" aria-hidden="true" />
+              <span
+                className="accent-dot accent-dot--orange"
+                aria-hidden="true"
+              />
               JVM
             </span>
           </div>
@@ -125,7 +130,10 @@ export default function OpenSource() {
                     <div className="font-semibold">{e.title}</div>
                     <div className="mt-1 text-xs mono-muted">{e.meta}</div>
                   </div>
-                  <span className={`accent-dot ${e.dotClass}`} aria-hidden="true" />
+                  <span
+                    className={`accent-dot ${e.dotClass}`}
+                    aria-hidden="true"
+                  />
                 </div>
                 <div className="mt-3 mono-muted text-sm leading-relaxed">
                   {e.description}
@@ -150,8 +158,14 @@ export default function OpenSource() {
             <div className="text-lg font-semibold">Contribution style</div>
             <div className="flex items-center gap-2">
               <span className="accent-dot accent-dot--red" aria-hidden="true" />
-              <span className="accent-dot accent-dot--orange" aria-hidden="true" />
-              <span className="accent-dot accent-dot--green" aria-hidden="true" />
+              <span
+                className="accent-dot accent-dot--orange"
+                aria-hidden="true"
+              />
+              <span
+                className="accent-dot accent-dot--green"
+                aria-hidden="true"
+              />
             </div>
           </div>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">

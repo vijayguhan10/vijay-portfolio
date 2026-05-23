@@ -94,7 +94,11 @@ const workExperience = [
     logo: logos.sriEshwar,
     description:
       "Led the Center for International Relations as Student Lead, managing student affairs, organizing events, and fostering global collaborations.",
-    skills: ["International Relations", "Student Affairs", "Event Organization"],
+    skills: [
+      "International Relations",
+      "Student Affairs",
+      "Event Organization",
+    ],
   },
 ];
 
@@ -116,7 +120,10 @@ export default function Experience() {
               </p>
             </div>
             <span className="mono-pill">
-              <span className="accent-dot accent-dot--green" aria-hidden="true" />
+              <span
+                className="accent-dot accent-dot--green"
+                aria-hidden="true"
+              />
               Shipping
             </span>
           </div>
