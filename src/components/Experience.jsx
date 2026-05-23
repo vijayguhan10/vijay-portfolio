@@ -62,7 +62,7 @@ const techStack = [
 const Experience = () => {
   const workExperience = [
     {
-      icon: <FaBriefcase className="text-amber-500" />,
+      icon: <FaBriefcase className="text-black" />,
       role: "Software Developer (LeaveEase)",
       company: "Gilbarco Veeder-Root Pvt Ltd",
       period: "2024",
@@ -70,10 +70,10 @@ const Experience = () => {
       description:
         "Developed a Leave Management Software that automated the entire leave cycle, from application to manager approval, ensuring efficient tracking and streamlined workflows.",
       skills: ["React.js", "MongoDB", "Node.js", "Express.js"],
-      color: "bg-amber-500",
+      color: "bg-black",
     },
     {
-      icon: <FaBriefcase className="text-blue-500" />,
+      icon: <FaBriefcase className="text-black" />,
       role: "Mobile App Developer (Isaii Ai)",
       company: "Isaii Ai",
       period: "2025",
@@ -81,10 +81,10 @@ const Experience = () => {
       description:
         "Developed a feature-rich trip booking and management application using React Native, allowing users to seamlessly plan journeys, make reservations, and coordinate their trips in a unified platform.",
       skills: ["React Native", "Node.js", "Express.js", "MongoDB"],
-      color: "bg-blue-500",
+      color: "bg-black",
     },
     {
-      icon: <FaGraduationCap className="text-purple-500" />,
+      icon: <FaGraduationCap className="text-black" />,
       role: "Student Mentor",
       company: "Sri Eshwar College of Engineering",
       period: "Jan 2020 - Present",
@@ -92,10 +92,10 @@ const Experience = () => {
       description:
         "Guided students in leadership, teaching, and mentoring to help them excel academically and professionally.",
       skills: ["Leadership", "Teaching", "Mentoring"],
-      color: "bg-purple-500",
+      color: "bg-black",
     },
     {
-      icon: <FaUsers className="text-green-500" />,
+      icon: <FaUsers className="text-black" />,
       role: "Center for International Relations - Student Lead, Student Affairs",
       company: "Sri Eshwar College of Engineering",
       period: "Jun 2021 - Present",
@@ -107,7 +107,7 @@ const Experience = () => {
         "Student Affairs",
         "Event Organization",
       ],
-      color: "bg-green-500",
+      color: "bg-black",
     },
   ];
   const certifications = [
@@ -149,69 +149,73 @@ const Experience = () => {
   ];
 
   return (
-    <div className="py-10 px-2 sm:py-14 sm:px-4 md:px-8 lg:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="mono-section">
+      <div className="mono-shell">
         {/* Work Experience Timeline */}
-        <div className="mt-12 sm:mt-20">
-          <p className="text-center text-gray-500 uppercase tracking-wider text-xs sm:text-sm mb-2">
-            What I've done so far
-          </p>
-          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-10 sm:mb-16">
-            Work Experience
-          </h2>
+        <div className="mt-12 sm:mt-20" id="experiences">
+          <div className="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <div className="mono-kicker">EXPERIENCE</div>
+              <h2 className="mt-3 text-2xl sm:text-4xl mono-title">
+                Work Experience
+              </h2>
+              <p className="mt-4 mono-muted max-w-2xl">
+                Roles and responsibilities focused on shipping features, owning workflows, and mentoring.
+              </p>
+            </div>
+            <a href="#certificates" className="mono-button-outline">
+              Certifications →
+            </a>
+          </div>
 
-          <div className="relative">
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
-            <div className="flex flex-col gap-10">
+          <div className="relative mt-10">
+            <div className="hidden md:block absolute left-6 top-0 h-full w-px bg-black/10"></div>
+            <div className="flex flex-col gap-6">
               {workExperience.map((exp, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className={`relative flex flex-col md:flex-row items-center justify-between md:mb-12`}
+                  className="relative"
                 >
-                  <div
-                    className={`w-full md:w-5/12 p-4 sm:p-6 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group ${
-                      index % 2 === 0
-                        ? "md:mr-auto md:ml-0"
-                        : "md:ml-auto md:mr-0"
-                    }`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={exp.logo}
-                        alt={`${exp.company} logo`}
-                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cntain shadow-md"
-                      />
-                      <div>
-                        <h3 className="font-bold text-base sm:text-lg">
-                          {exp.role}
-                        </h3>
-                        <p className="text-gray-500 text-sm sm:text-base">
-                          {exp.company}
-                        </p>
+                  <div className="absolute left-6 top-8 hidden md:block">
+                    <div className="h-3 w-3 rounded-full bg-white border border-black/25" />
+                  </div>
+
+                  <div className="md:pl-16">
+                    <div className="mono-card p-6">
+                      <div className="flex items-start justify-between gap-4 flex-wrap">
+                        <div className="flex items-center gap-4">
+                          <img
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-contain mono-media border border-black/10"
+                          />
+                          <div>
+                            <h3 className="font-semibold text-base sm:text-lg">
+                              {exp.role}
+                            </h3>
+                            <p className="text-sm sm:text-base mono-muted">
+                              {exp.company}
+                            </p>
+                          </div>
+                        </div>
+                        <span className="mono-pill">{exp.period}</span>
+                      </div>
+
+                      <p className="mono-muted mt-4 text-sm sm:text-base leading-relaxed">
+                        {exp.description}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {exp.skills.map((skill, i) => (
+                          <span key={i} className="mono-pill">
+                            {skill}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <p className="text-gray-400 text-xs sm:text-sm mt-2">
-                      {exp.period}
-                    </p>
-                    <p className="text-gray-600 mt-4 text-sm sm:text-base">
-                      {exp.description}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <span
-                          key={i}
-                          className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
                   </div>
-                  {/* Timeline Dot */}
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-white border-4 border-gray-200 z-10"></div>
                 </motion.div>
               ))}
             </div>
@@ -219,22 +223,22 @@ const Experience = () => {
         </div>
 
         {/* Technical Stack Section */}
-        <div className="mt-20 sm:mt-32 mb-10 sm:mb-16">
+        <div className="mt-20 sm:mt-32 mb-10 sm:mb-16" id="skills">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left: Headings and CTA */}
             <div className="flex-1 max-w-xl">
-              <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-5xl mono-title mb-4 sm:mb-6 leading-tight">
                 My technical stack <br />
-                includes <span className="text-gray-700">various</span> <br />
-                <span className="text-gray-400">technologies and tools</span>
+                includes <span className="mono-muted">various</span> <br />
+                <span className="text-black/50">technologies and tools</span>
               </h2>
-              <p className="text-base sm:text-lg text-gray-500 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg mono-muted mb-6 sm:mb-8">
                 Explore the technologies I utilize to drive innovation in my
                 projects.
               </p>
               <a
                 href="mailto:your@email.com"
-                className="inline-block bg-black text-white text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:bg-gray-800 transition"
+                className="mono-button inline-block"
               >
                 Connect with me!
               </a>
@@ -249,17 +253,14 @@ const Experience = () => {
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.07 }}
-                    className="bg-white rounded-2xl shadow-xl flex flex-col items-center py-4 sm:py-6 px-2 hover:scale-105 hover:shadow-2xl transition-all duration-300"
+                    className="mono-card flex flex-col items-center py-4 sm:py-6 px-2 transition"
                   >
                     <img
                       src={tech.logo}
                       alt={tech.name}
-                      className="w-10 h-10 sm:w-14 sm:h-14 object-contain mb-2 sm:mb-3"
-                      style={{
-                        filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.08))",
-                      }}
+                      className="w-10 h-10 sm:w-14 sm:h-14 object-contain mb-2 sm:mb-3 mono-media"
                     />
-                    <span className="text-gray-800 font-semibold text-xs sm:text-base">
+                    <span className="text-black/80 font-semibold text-xs sm:text-base">
                       {tech.name}
                     </span>
                   </motion.div>
@@ -270,31 +271,31 @@ const Experience = () => {
         </div>
 
         {/* Certifications Section */}
-        <div className="mt-20 sm:mt-32 mb-8">
-          <div className="w-full mx-auto bg-white/60 backdrop-blur-lg rounded-3xl shadow-2xl p-4 sm:p-10 border border-gray-200">
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-center text-gray-900 mb-2 sm:mb-4 tracking-tight drop-shadow-lg">
+        <div className="mt-20 sm:mt-32 mb-8" id="certificates">
+          <div className="w-full mx-auto mono-card p-4 sm:p-10">
+            <h2 className="text-3xl sm:text-5xl mono-title text-center mb-2 sm:mb-4 tracking-tight">
               Certifications
             </h2>
-            <p className="text-base sm:text-xl text-center text-gray-600 mb-6 sm:mb-10 font-medium">
+            <p className="text-base sm:text-xl text-center mono-muted mb-6 sm:mb-10 font-medium">
               List of certifications and their details
             </p>
             <div className="overflow-x-auto rounded-2xl">
               <table className="min-w-full text-xs sm:text-lg text-left border-separate border-spacing-y-2">
                 <thead>
-                  <tr className="bg-gradient-to-r from-gray-100 to-gray-200">
-                    <th className="px-2 sm:px-6 py-2 sm:py-4 rounded-l-2xl font-bold text-gray-800">
+                  <tr className="bg-black/[0.02]">
+                    <th className="px-2 sm:px-6 py-2 sm:py-4 rounded-l-2xl font-semibold text-black/80">
                       Domain
                     </th>
-                    <th className="px-2 sm:px-6 py-2 sm:py-4 font-bold text-gray-800">
+                    <th className="px-2 sm:px-6 py-2 sm:py-4 font-semibold text-black/80">
                       Certification
                     </th>
-                    <th className="px-2 sm:px-6 py-2 sm:py-4 font-bold text-gray-800">
+                    <th className="px-2 sm:px-6 py-2 sm:py-4 font-semibold text-black/80">
                       Issuing Organization
                     </th>
-                    <th className="px-2 sm:px-6 py-2 sm:py-4 font-bold text-gray-800">
+                    <th className="px-2 sm:px-6 py-2 sm:py-4 font-semibold text-black/80">
                       Issue Date
                     </th>
-                    <th className="px-2 sm:px-6 py-2 sm:py-4 rounded-r-2xl font-bold text-gray-800">
+                    <th className="px-2 sm:px-6 py-2 sm:py-4 rounded-r-2xl font-semibold text-black/80">
                       Credential URL
                     </th>
                   </tr>
@@ -303,28 +304,24 @@ const Experience = () => {
                   {certifications.map((cert, i) => (
                     <tr
                       key={i}
-                      className={`transition-all duration-300 ${
-                        i % 2 === 0
-                          ? "bg-white/80 hover:bg-gradient-to-r hover:from-amber-50 hover:to-yellow-100"
-                          : "bg-gray-50/80 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-100"
-                      } shadow-sm rounded-2xl`}
+                      className="transition-all duration-200 bg-white hover:bg-black/[0.02] rounded-2xl"
                     >
-                      <td className="px-2 sm:px-6 py-2 sm:py-4 rounded-l-2xl font-semibold text-gray-700">
+                      <td className="px-2 sm:px-6 py-2 sm:py-4 rounded-l-2xl font-semibold text-black/80">
                         {cert.domain}
                       </td>
-                      <td className="px-2 sm:px-6 py-2 sm:py-4 font-medium text-gray-800">
+                      <td className="px-2 sm:px-6 py-2 sm:py-4 font-medium text-black/80">
                         {cert.cert}
                       </td>
-                      <td className="px-2 sm:px-6 py-2 sm:py-4 text-gray-700">
+                      <td className="px-2 sm:px-6 py-2 sm:py-4 text-black/70">
                         {cert.org}
                       </td>
-                      <td className="px-2 sm:px-6 py-2 sm:py-4 text-gray-500">
+                      <td className="px-2 sm:px-6 py-2 sm:py-4 text-black/50">
                         {cert.date}
                       </td>
                       <td className="px-2 sm:px-6 py-2 sm:py-4 rounded-r-2xl">
                         <a
                           href={cert.url}
-                          className="text-blue-600 font-semibold underline underline-offset-2 hover:text-blue-800 transition"
+                          className="mono-link font-semibold"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -339,7 +336,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

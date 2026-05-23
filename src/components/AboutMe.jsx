@@ -4,21 +4,14 @@ import profileImage from "../assets/vijay personal.jpg";
 
 const AboutMe = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white relative overflow-hidden">
-      {/* Background subtle elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-50 rounded-full filter blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-50 rounded-full filter blur-3xl opacity-10 translate-x-1/2 translate-y-1/2"></div>
-
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 flex flex-col lg:flex-row items-center">
+    <section className="mono-section" id="about">
+      <div className="mono-shell flex flex-col lg:flex-row items-center gap-12">
         <div className="w-full lg:w-1/2 lg:pr-16 mb-10 lg:mb-0 z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-2">
-            Welcome to My World of{" "}
-            <span className="text-amber-700">Innovation</span>{" "}
-            <span className="text-gray-800">and</span>{" "}
-            <span className="text-gray-500">Creativity!</span>
+          <h2 className="text-3xl sm:text-5xl mono-title">
+            Welcome to my world of <span className="underline decoration-black/20 underline-offset-8">innovation</span> and <span className="mono-muted">craft</span>.
           </h2>
 
-          <p className="text-gray-600 mt-8 leading-relaxed">
+          <p className="mono-muted mt-7 leading-relaxed">
             I am Vijay Guhan K M, a passionate software developer with hands-on
             experience in building ERP solutions and microservices
             architectures. As the Lead for CIR International Relations, I
@@ -28,12 +21,12 @@ const AboutMe = () => {
             learning environment within my teams and the wider tech community.
           </p>
 
-          <div className="mt-8 flex space-x-4">
+          <div className="mt-7 flex gap-5">
             <a
               href="https://www.linkedin.com/in/vijay-guhan-728299283/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0077b5] text-2xl hover:scale-110 transition-transform"
+              className="text-black/70 hover:text-black transition"
             >
               <FaLinkedin />
             </a>
@@ -41,7 +34,7 @@ const AboutMe = () => {
               href="https://github.com/vijayguhan10"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 text-2xl hover:scale-110 transition-transform"
+              className="text-black/70 hover:text-black transition"
             >
               <FaGithub />
             </a>
@@ -49,7 +42,7 @@ const AboutMe = () => {
               href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black text-2xl hover:scale-110 transition-transform"
+              className="text-black/70 hover:text-black transition"
             >
               <FaXTwitter />
             </a>
@@ -57,40 +50,33 @@ const AboutMe = () => {
               href="https://instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#fd5949] text-2xl hover:scale-110 transition-transform"
+              className="text-black/70 hover:text-black transition"
             >
               <FaInstagram />
             </a>
           </div>
 
-          <button className="mt-8 bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            Get Connect
-          </button>
+          <a href="#contact" className="mt-8 inline-block mono-button">
+            Get in touch
+          </a>
         </div>
 
         {/* Right image section - responsive */}
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-64 sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden flex items-center justify-center">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-64 sm:h-[350px] md:h-[450px] lg:h-[550px] overflow-hidden flex items-center justify-center mono-card">
             <img
               src={profileImage}
               alt="Vijay Guhan"
-              className="rounded-br-[10%] rounded-tl-[10%] w-[70%] h-full "
+              className="mono-media rounded-br-[10%] rounded-tl-[10%] w-[70%] h-full"
             />
-            <div className="absolute inset-0 to-transparent"></div>
           </div>
         </div>
       </div>
 
-      {/* Heart icon */}
-      <div className="fixed left-4 sm:left-8 bottom-4 sm:bottom-8 text-[2rem] sm:text-[2.5rem] select-none">
-        <span role="img" aria-label="heart" className="text-pink-500">
-          ❤️
-        </span>
+      <div className="mono-shell pb-8">
+        <div className="text-sm mono-muted">🖤 Built in black & white.</div>
       </div>
-
-   
-      
-    </div>
+    </section>
   );
 };
 

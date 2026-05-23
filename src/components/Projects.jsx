@@ -1,21 +1,4 @@
 import React, { useState } from "react";
-import { FaReact, FaPython, FaJs, FaNodeJs, FaDatabase } from "react-icons/fa";
-import { SiTensorflow, SiFlask, SiMongodb, SiArduino } from "react-icons/si";
-
-// Unique placeholder images for each project (replace with your own if available)
-
-// Tech stack icon mapping
-const techIcons = {
-  React: FaReact,
-  Python: FaPython,
-  JS: FaJs,
-  TensorFlow: SiTensorflow,
-  Flask: SiFlask,
-  Node: FaNodeJs,
-  MongoDB: SiMongodb,
-  Arduino: SiArduino,
-  Express: FaNodeJs,
-};
 
 const projectsData = [
   {
@@ -26,6 +9,10 @@ const projectsData = [
     techs: ["React", "Node", "Express", "MongoDB"],
     link: "https://github.com/yourusername/invotrack",
     sample: null,
+    highlights: [
+      "Automates billing + inventory workflows",
+      "Designed for speed and day-to-day operations",
+    ],
   },
   {
     title: "EventSync",
@@ -37,6 +24,10 @@ const projectsData = [
     sample: [
       { label: "Email", value: "eaniqac1@sece.ac.in" },
       { label: "Password", value: "sece" },
+    ],
+    highlights: [
+      "End-to-end event lifecycle workflows",
+      "Operational forms + orchestration in one place",
     ],
   },
   {
@@ -51,6 +42,10 @@ const projectsData = [
       { label: "Password", value: "1234" },
       { label: "Admin Email", value: "manish10@gmail.com" },
       { label: "Password", value: "1234" },
+    ],
+    highlights: [
+      "Role-based access: Super Admin / Admin / Telecaller",
+      "Lead tracking + WhatsApp-driven follow ups",
     ],
   },
   {
@@ -67,6 +62,10 @@ const projectsData = [
       { label: "Password", value: "123" },
       { label: "Employee Username", value: "24Gilbarco003" },
       { label: "Password", value: "user@123" },
+    ],
+    highlights: [
+      "Workflow automation: request → approval → audit",
+      "Real-time status + notification integrations",
     ],
   },
   {
@@ -86,6 +85,10 @@ const projectsData = [
       { label: "Individual User Email", value: "manishrahul1705@gmail.com" },
       { label: "Individual Password", value: "1234567890" },
     ],
+    highlights: [
+      "Inventory + service scheduling flows",
+      "Multi-surface ops (admin + partner panels)",
+    ],
   },
   {
     title: "4Trip - Trip Booking App",
@@ -98,6 +101,10 @@ const projectsData = [
       { label: "Sample User ID", value: "67d5b997b32740bf20d6d15f" },
       { label: "Name", value: "Sasi" },
     ],
+    highlights: [
+      "Mobile-first booking and coordination",
+      "Backend APIs for a unified trip workflow",
+    ],
   },
 ];
 
@@ -109,40 +116,55 @@ const Projects = () => {
   });
 
   return (
-    <div className="py-16 px-4 md:px-8 lg:px-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          Projects.
-        </h1>
-        <p className="text-gray-600 mb-12 max-w-4xl">
+    <section className="mono-section" id="projects">
+      <div className="mono-shell">
+        <div className="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div className="mono-kicker">SELECTED WORK</div>
+            <h1 className="mt-3 text-3xl sm:text-5xl mono-title">Projects.</h1>
+            <p className="mt-4 mono-muted max-w-4xl">
           Explore some of my notable projects, showcasing innovations in
           technology and leadership. These initiatives reflect my commitment to
           harnessing advanced techniques for impactful solutions in various
           fields. Join me in discovering how I've combined creativity and
           technical expertise to drive positive change.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </p>
+          </div>
+          <a
+            href="#open-source"
+            className="mono-button-outline"
+          >
+            Open source →
+          </a>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden shadow-xl bg-black relative group"
-              style={{
-                background:
-                  "linear-gradient(135deg, #f8fafc 80%, #e0e7ff 100%)",
-                border: "1px solid #e5e7eb",
-              }}
+              className="mono-card relative overflow-hidden"
             >
               {/* Gradient overlay for card, no image */}
-              <div className="h-64 relative flex flex-col justify-center px-6 py-4">
-                <h2 className="text-gray-900 text-2xl font-bold mb-2">
+              <div className="min-h-64 relative flex flex-col justify-between px-6 py-6">
+                <div>
+                  <h2 className="text-xl font-semibold tracking-tight">
                   {project.title}
-                </h2>
-                <p className="text-gray-700 text-sm">{project.description}</p>
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed mono-muted">{project.description}</p>
+
+                  {Array.isArray(project.highlights) && project.highlights.length > 0 && (
+                    <ul className="mt-4 space-y-1 text-sm text-black/70">
+                      {project.highlights.slice(0, 2).map((h) => (
+                        <li key={h}>• {h}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
                 {/* Show Sample Login button if sample exists */}
                 {project.sample && (
                   <button
                     type="button"
-                    className="absolute top-4 right-4 bg-[#ffd700] text-black text-xs font-bold px-3 py-1 rounded-full shadow hover:bg-yellow-400 transition z-20"
+                    className="absolute top-4 right-4 mono-button-outline text-xs px-3 py-1"
                     onClick={() =>
                       setSampleOpen({
                         open: true,
@@ -154,72 +176,66 @@ const Projects = () => {
                     Sample Login
                   </button>
                 )}
-              </div>
-              {/* Tech stack icons using react-icons */}
-              <div className="absolute bottom-4 left-4 flex space-x-2">
-                {project.techs.map((tech, techIndex) => {
-                  const IconComponent = techIcons[tech];
-                  const bgColor =
-                    tech === "Python"
-                      ? "bg-blue-500"
-                      : tech === "JS"
-                      ? "bg-yellow-400"
-                      : tech === "React"
-                      ? "bg-cyan-400"
-                      : tech === "TensorFlow"
-                      ? "bg-orange-500"
-                      : tech === "Flask"
-                      ? "bg-gray-700"
-                      : tech === "Node"
-                      ? "bg-green-500"
-                      : tech === "MongoDB"
-                      ? "bg-green-700"
-                      : tech === "Arduino"
-                      ? "bg-teal-500"
-                      : tech === "Express"
-                      ? "bg-gray-800"
-                      : "bg-gray-500";
 
-                  return (
-                    <span
-                      key={techIndex}
-                      className={`w-8 h-8 rounded-full flex items-center justify-center ${bgColor} transition-transform transform hover:scale-110`}
-                      title={tech}
-                    >
-                      {IconComponent && (
-                        <IconComponent className="text-white text-sm" />
-                      )}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.techs.map((tech) => (
+                    <span key={tech} className="mono-pill">
+                      {tech}
                     </span>
-                  );
-                })}
-              </div>
-              {/* View project button */}
-              <div className="absolute bottom-4 right-4">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black hover:bg-gray-800 text-white text-sm px-4 py-2 rounded-md transition duration-300"
-                >
-                  View Project
-                </a>
+                  ))}
+                </div>
+
+                <div className="mt-6">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mono-link text-sm font-semibold"
+                  >
+                    View Project
+                  </a>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 mono-card-soft p-7">
+          <div className="flex items-center justify-between gap-4 flex-wrap">
+            <div className="text-lg font-semibold">How I build</div>
+            <span className="mono-pill">
+              <span className="accent-dot accent-dot--yellow" aria-hidden="true" />
+              Craft
+            </span>
+          </div>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="mono-card p-5">
+              <div className="font-semibold">Product thinking</div>
+              <div className="mt-2 mono-muted text-sm">
+                Design flows that reduce friction for real users.
+              </div>
+            </div>
+            <div className="mono-card p-5">
+              <div className="font-semibold">Engineering hygiene</div>
+              <div className="mt-2 mono-muted text-sm">
+                Naming, boundaries, and consistent patterns across the app.
+              </div>
+            </div>
+            <div className="mono-card p-5">
+              <div className="font-semibold">Delivery</div>
+              <div className="mt-2 mono-muted text-sm">
+                Ship iteratively with confidence and clear change sets.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* Sample Login Modal */}
       {sampleOpen.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-          <div
-            className="rounded-xl shadow-2xl p-7 w-full max-w-sm relative flex flex-col items-center"
-            style={{
-              background: "linear-gradient(135deg, #f8fafc 80%, #e0e7ff 100%)",
-              border: "1px solid #e5e7eb",
-            }}
-          >
+          <div className="mono-card p-7 w-full max-w-sm relative flex flex-col items-center">
             <button
-              className="absolute top-3 right-4 text-gray-500 hover:text-black text-2xl font-bold transition"
+              className="absolute top-3 right-4 text-black/60 hover:text-black text-2xl font-bold transition"
               onClick={() =>
                 setSampleOpen({ open: false, data: null, title: "" })
               }
@@ -227,17 +243,17 @@ const Projects = () => {
             >
               ×
             </button>
-            <div className="text-xl font-bold text-gray-900 mb-2 text-center">
+            <div className="text-xl font-semibold mb-2 text-center">
               {sampleOpen.title}
             </div>
-            <div className="text-base text-[#ffd700] mb-4 font-semibold text-center">
+            <div className="text-sm mb-4 font-semibold text-center mono-muted">
               Sample Login / Info
             </div>
-            <div className="text-gray-700 text-sm space-y-2 w-full">
+            <div className="text-sm space-y-2 w-full">
               {sampleOpen.data.map((item, i) => (
                 <div
                   key={i}
-                  className="flex justify-between items-center bg-white/70 rounded px-3 py-2 mb-1"
+                  className="flex justify-between items-center mono-card-soft rounded-xl px-3 py-2"
                 >
                   <span className="font-semibold">{item.label}:</span>
                   <span className="font-mono break-all">{item.value}</span>
@@ -247,30 +263,7 @@ const Projects = () => {
           </div>
         </div>
       )}
-      {/* Scroll to top button */}
-      <div className="fixed right-8 bottom-8">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition duration-300"
-          aria-label="Scroll to top"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
+    </section>
   );
 };
 

@@ -50,104 +50,141 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="sm:mt-3  xl:mt-20 flex flex-col justify-center items-center relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 left-0 w-40 h-40 sm:w-72 sm:h-72 bg-blue-100 rounded-full filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+    <section className="mono-section" id="home">
+      <div className="mono-shell">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7">
+            <div className="mono-kicker flex items-center gap-3">
+              <span>LET'S BUILD SOMETHING TOGETHER</span>
+              <span className="hidden sm:inline-flex items-center gap-1.5" aria-hidden="true">
+                <span className="accent-dot accent-dot--red" />
+                <span className="accent-dot accent-dot--yellow" />
+                <span className="accent-dot accent-dot--green" />
+              </span>
+            </div>
 
-        <div className="text-[1rem] xs:text-[1.1rem] sm:text-[1.3rem] text-gray-600 font-medium tracking-wider flex items-center justify-center">
-          LET'S BUILD SOMETHING TOGETHER
-          <span
-            role="img"
-            aria-label="handshake"
-            className="ml-2 transform hover:scale-110 transition-transform inline-block"
-          >
-            🤝
-          </span>
-        </div>
+            <h1 className="mt-5 text-4xl sm:text-6xl mono-title leading-[1.05]">
+              Vijay Guhan.
+              <span className="block mt-3 text-black/70 font-semibold text-2xl sm:text-3xl">
+                Full-stack engineer who ships.
+              </span>
+            </h1>
 
-        <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-[4rem] font-extrabold mt-8 text-gray-800 tracking-wide leading-tight">
-          Hi, I'm{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-black">
-            VIJAY GUHAN
-          </span>
-          <span
-            role="img"
-            aria-label="waving hand"
-            className="inline-block animate-wave"
-          >
-            👋
-          </span>
-        </h1>
+            <div className="mt-6">
+              <div className="text-sm font-semibold text-black/60">Currently</div>
+              <div className="mt-2 inline-flex items-center gap-2 mono-card-soft px-4 py-3">
+                <span className="text-black/60">→</span>
+                <span
+                  ref={typewriterRef}
+                  className="text-sm sm:text-base font-semibold tracking-wide border-r-2 border-black/50 pr-2 min-h-[24px]"
+                >
+                  A T
+                </span>
+              </div>
+            </div>
 
-        <div className="mt-8 flex justify-center">
-          <h2
-            ref={typewriterRef}
-            className="text-base xs:text-lg sm:text-2xl md:text-[2.5rem] font-bold text-gray-700 tracking-wider inline-block border-r-4 border-blue-500 pr-2 min-h-[40px] sm:min-h-[50px] animate-pulse-border"
-          >
-            A T
-          </h2>
-        </div>
+            <p className="mt-7 mono-lead">
+              As a competitive programming enthusiast, I enjoy dissecting algorithms and optimizing performance — while architecting reliable back-end systems and clean UI that feel effortless to use.
+            </p>
 
-        <p className="mt-8 sm:mt-10 mx-auto max-w-full sm:max-w-3xl text-sm xs:text-base sm:text-lg md:text-[1.25rem] text-gray-600 font-normal leading-relaxed backdrop-blur-sm bg-white bg-opacity-50 p-4 sm:p-6 rounded-xl shadow-sm">
-          As a competitive programming enthusiast, I revel in dissecting
-          intricate algorithms and optimizing performance metrics, all while
-          architecting dynamic back-end frameworks that drive cutting-edge
-          software innovations.
-        </p>
+            <div className="mt-8 flex items-center gap-3 flex-wrap">
+              <a
+                href="#projects"
+                className="mono-button"
+              >
+                View work
+              </a>
+              <a
+                href="#contact"
+                className="mono-button-outline"
+              >
+                Contact
+              </a>
+              <a
+                href="https://drive.google.com/uc?export=download&id=1qOYVSDADpW8gxs-Tn4iUebMsVdVW9KIC"
+                className="mono-link text-sm font-semibold"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                Download resume
+              </a>
+            </div>
 
-        <div className="mt-10 sm:mt-12 flex justify-center gap-4 sm:gap-6 flex-wrap">
-          {/* Social Icons */}
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#0077b5] text-2xl sm:text-[2.2rem] hover:scale-110 transition-transform hover:opacity-80"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 text-2xl sm:text-[2.2rem] hover:scale-110 transition-transform hover:opacity-80"
-            aria-label="GitHub"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black text-2xl sm:text-[2.2rem] hover:scale-110 transition-transform hover:opacity-80"
-            aria-label="Twitter"
-          >
-            <FaXTwitter />
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#fd5949] text-2xl sm:text-[2.2rem] hover:scale-110 transition-transform hover:opacity-80"
-            aria-label="Instagram"
-          >
-            <FaInstagram />
-          </a>
-        </div>
+            <div className="mt-8 flex items-center gap-4">
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/60 hover:text-black transition"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="text-2xl" />
+              </a>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/60 hover:text-black transition"
+                aria-label="GitHub"
+              >
+                <FaGithub className="text-2xl" />
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/60 hover:text-black transition"
+                aria-label="Twitter"
+              >
+                <FaXTwitter className="text-2xl" />
+              </a>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/60 hover:text-black transition"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl" />
+              </a>
+            </div>
+          </div>
 
-        {/* Download Resume Button */}
-        <div className="mt-6 mb-20 flex justify-center">
-          <a
-            href="https://drive.google.com/uc?export=download&id=1qOYVSDADpW8gxs-Tn4iUebMsVdVW9KIC"
-            className="bg-black hover:bg-grey-800 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition-all duration-200 text-base sm:text-lg"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-          >
-            Download Resume
-          </a>
+          <div className="lg:col-span-5">
+            <div className="mono-card p-7">
+              <div className="flex items-center justify-between">
+                <div className="text-lg font-semibold">Portfolio principles</div>
+                <span className="mono-pill">
+                  <span className="accent-dot accent-dot--green" aria-hidden="true" />
+                  Shipping
+                </span>
+              </div>
+              <div className="mt-4 grid grid-cols-1 gap-3">
+                <div className="mono-card-soft p-4">
+                  <div className="font-semibold">Clarity over noise</div>
+                  <div className="mt-1 text-sm mono-muted">
+                    Monochrome UI where hierarchy does the heavy lifting.
+                  </div>
+                </div>
+                <div className="mono-card-soft p-4">
+                  <div className="font-semibold">Systems mindset</div>
+                  <div className="mt-1 text-sm mono-muted">
+                    Workflows, data models, and operational reliability.
+                  </div>
+                </div>
+                <div className="mono-card-soft p-4">
+                  <div className="font-semibold">Craft</div>
+                  <div className="mt-1 text-sm mono-muted">
+                    Clean code, readable components, and consistent UX.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
   );
 };
 
