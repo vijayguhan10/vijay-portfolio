@@ -21,14 +21,14 @@ const Home = () => {
       if (isDeleting) {
         typewriterRef.current.innerText = currentRole.substring(
           0,
-          charIndex - 1
+          charIndex - 1,
         );
         charIndex--;
         typingSpeed = 50;
       } else {
         typewriterRef.current.innerText = currentRole.substring(
           0,
-          charIndex + 1
+          charIndex + 1,
         );
         charIndex++;
         typingSpeed = 100;
@@ -56,7 +56,10 @@ const Home = () => {
           <div className="lg:col-span-7">
             <div className="mono-kicker flex items-center gap-3">
               <span>LET'S BUILD SOMETHING TOGETHER</span>
-              <span className="hidden sm:inline-flex items-center gap-1.5" aria-hidden="true">
+              <span
+                className="hidden sm:inline-flex items-center gap-1.5"
+                aria-hidden="true"
+              >
                 <span className="accent-dot accent-dot--red" />
                 <span className="accent-dot accent-dot--yellow" />
                 <span className="accent-dot accent-dot--green" />
@@ -71,7 +74,9 @@ const Home = () => {
             </h1>
 
             <div className="mt-6">
-              <div className="text-sm font-semibold text-black/60">Currently</div>
+              <div className="text-sm font-semibold text-black/60">
+                Currently
+              </div>
               <div className="mt-2 inline-flex items-center gap-2 mono-card-soft px-4 py-3">
                 <span className="text-black/60">→</span>
                 <span
@@ -84,20 +89,17 @@ const Home = () => {
             </div>
 
             <p className="mt-7 mono-lead">
-              As a competitive programming enthusiast, I enjoy dissecting algorithms and optimizing performance — while architecting reliable back-end systems and clean UI that feel effortless to use.
+              As a competitive programming enthusiast, I enjoy dissecting
+              algorithms and optimizing performance — while architecting
+              reliable back-end systems and clean UI that feel effortless to
+              use.
             </p>
 
             <div className="mt-8 flex items-center gap-3 flex-wrap">
-              <a
-                href="#projects"
-                className="mono-button"
-              >
+              <a href="#projects" className="mono-button">
                 View work
               </a>
-              <a
-                href="#contact"
-                className="mono-button-outline"
-              >
+              <a href="#contact" className="mono-button-outline">
                 Contact
               </a>
               <a
@@ -152,11 +154,16 @@ const Home = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="mono-card p-7">
+            <div className="mono-glass-card p-7">
               <div className="flex items-center justify-between">
-                <div className="text-lg font-semibold">Portfolio principles</div>
+                <div className="text-lg font-semibold">
+                  Portfolio principles
+                </div>
                 <span className="mono-pill">
-                  <span className="accent-dot accent-dot--green" aria-hidden="true" />
+                  <span
+                    className="accent-dot accent-dot--green"
+                    aria-hidden="true"
+                  />
                   Shipping
                 </span>
               </div>

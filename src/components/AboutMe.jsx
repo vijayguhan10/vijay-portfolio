@@ -8,7 +8,11 @@ const AboutMe = () => {
       <div className="mono-shell flex flex-col lg:flex-row items-center gap-12">
         <div className="w-full lg:w-1/2 lg:pr-16 mb-10 lg:mb-0 z-10">
           <h2 className="text-3xl sm:text-5xl mono-title">
-            Welcome to my world of <span className="underline decoration-black/20 underline-offset-8">innovation</span> and <span className="mono-muted">craft</span>.
+            Welcome to my world of{" "}
+            <span className="underline decoration-black/20 underline-offset-8">
+              innovation
+            </span>{" "}
+            and <span className="mono-muted">craft</span>.
           </h2>
 
           <p className="mono-muted mt-7 leading-relaxed">

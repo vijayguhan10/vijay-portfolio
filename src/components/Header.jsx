@@ -13,7 +13,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-black/10 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/75 sticky top-0 z-40">
+    <header className="w-full mono-glassbar sticky top-0 z-40">
       <div className="mono-shell py-4">
         <div className="relative w-full">
           {/* Desktop Nav */}
@@ -31,7 +31,10 @@ const Header = () => {
             </div>
             <div className="flex-shrink-0 px-4">
               <div className="flex items-center gap-3">
-                <div className="hidden lg:flex items-center gap-1.5" aria-hidden="true">
+                <div
+                  className="hidden lg:flex items-center gap-1.5"
+                  aria-hidden="true"
+                >
                   <span className="accent-dot accent-dot--red" />
                   <span className="accent-dot accent-dot--yellow" />
                   <span className="accent-dot accent-dot--green" />
@@ -101,7 +104,7 @@ const Header = () => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="absolute top-full left-0 w-full flex justify-end z-50">
-              <div className="mt-3 w-[92vw] max-w-sm mono-card p-4">
+              <div className="mt-3 w-[92vw] max-w-sm mono-glass-card p-4">
                 <div className="flex flex-col gap-2">
                   {navLinks.map((link) => (
                     <a

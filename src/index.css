@@ -15,9 +15,13 @@
     --mono-surface-2: rgb(0 0 0 / 0.04);
     --mono-radius: 18px;
 
+    --mono-shadow-1: 0 1px 0 rgb(0 0 0 / 0.02), 0 18px 40px rgb(0 0 0 / 0.06);
+    --mono-shadow-2: 0 1px 0 rgb(0 0 0 / 0.04), 0 22px 60px rgb(0 0 0 / 0.10);
+
     /* Minimal accent usage (requested): traffic-light micro accents only */
     --accent-red: #ef4444;
-    --accent-yellow: #f59e0b;
+    --accent-orange: #f97316;
+    --accent-yellow: var(--accent-orange);
     --accent-green: #22c55e;
   }
 
@@ -124,6 +128,30 @@ html,
     background: #ffffff;
     border: 1px solid var(--mono-border);
     border-radius: var(--mono-radius);
+  }
+
+  .mono-glassbar {
+    border-bottom: 1px solid var(--mono-border);
+    background: rgb(255 255 255 / 0.82);
+    backdrop-filter: blur(14px);
+  }
+
+  @supports not ((backdrop-filter: blur(1px))) {
+    .mono-glassbar {
+      background: #ffffff;
+    }
+  }
+
+  .mono-glass-card {
+    background: rgb(255 255 255 / 0.72);
+    border: 1px solid var(--mono-border);
+    border-radius: var(--mono-radius);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--mono-shadow-1);
+  }
+
+  .mono-glass-card:hover {
+    box-shadow: var(--mono-shadow-2);
   }
 
   .mono-card-soft {
@@ -246,6 +274,10 @@ html,
 
   .accent-dot--yellow {
     background: var(--accent-yellow);
+  }
+
+  .accent-dot--orange {
+    background: var(--accent-orange);
   }
 
   .accent-dot--green {

@@ -14,7 +14,10 @@ export default function Fun() {
           <div className="mono-card p-7">
             <div className="flex items-center justify-between gap-3">
               <div className="text-lg font-semibold">What I enjoy</div>
-              <span className="accent-dot accent-dot--yellow" aria-hidden="true" />
+              <span
+                className="accent-dot accent-dot--yellow"
+                aria-hidden="true"
+              />
             </div>
             <ul className="mt-4 space-y-2 mono-muted text-sm leading-relaxed">
               <li>• Competitive programming: solving + optimizing.</li>

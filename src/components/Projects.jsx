@@ -123,42 +123,39 @@ const Projects = () => {
             <div className="mono-kicker">SELECTED WORK</div>
             <h1 className="mt-3 text-3xl sm:text-5xl mono-title">Projects.</h1>
             <p className="mt-4 mono-muted max-w-4xl">
-          Explore some of my notable projects, showcasing innovations in
-          technology and leadership. These initiatives reflect my commitment to
-          harnessing advanced techniques for impactful solutions in various
-          fields. Join me in discovering how I've combined creativity and
-          technical expertise to drive positive change.
+              Explore some of my notable projects, showcasing innovations in
+              technology and leadership. These initiatives reflect my commitment
+              to harnessing advanced techniques for impactful solutions in
+              various fields. Join me in discovering how I've combined
+              creativity and technical expertise to drive positive change.
             </p>
           </div>
-          <a
-            href="#open-source"
-            className="mono-button-outline"
-          >
+          <a href="#open-source" className="mono-button-outline">
             Open source →
           </a>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map((project, index) => (
-            <div
-              key={index}
-              className="mono-card relative overflow-hidden"
-            >
+            <div key={index} className="mono-card relative overflow-hidden">
               {/* Gradient overlay for card, no image */}
               <div className="min-h-64 relative flex flex-col justify-between px-6 py-6">
                 <div>
                   <h2 className="text-xl font-semibold tracking-tight">
-                  {project.title}
+                    {project.title}
                   </h2>
-                  <p className="mt-3 text-sm leading-relaxed mono-muted">{project.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed mono-muted">
+                    {project.description}
+                  </p>
 
-                  {Array.isArray(project.highlights) && project.highlights.length > 0 && (
-                    <ul className="mt-4 space-y-1 text-sm text-black/70">
-                      {project.highlights.slice(0, 2).map((h) => (
-                        <li key={h}>• {h}</li>
-                      ))}
-                    </ul>
-                  )}
+                  {Array.isArray(project.highlights) &&
+                    project.highlights.length > 0 && (
+                      <ul className="mt-4 space-y-1 text-sm text-black/70">
+                        {project.highlights.slice(0, 2).map((h) => (
+                          <li key={h}>• {h}</li>
+                        ))}
+                      </ul>
+                    )}
                 </div>
                 {/* Show Sample Login button if sample exists */}
                 {project.sample && (
@@ -204,7 +201,10 @@ const Projects = () => {
           <div className="flex items-center justify-between gap-4 flex-wrap">
             <div className="text-lg font-semibold">How I build</div>
             <span className="mono-pill">
-              <span className="accent-dot accent-dot--yellow" aria-hidden="true" />
+              <span
+                className="accent-dot accent-dot--yellow"
+                aria-hidden="true"
+              />
               Craft
             </span>
           </div>

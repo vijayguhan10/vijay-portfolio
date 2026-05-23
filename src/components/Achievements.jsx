@@ -67,8 +67,8 @@ export default function Achievements() {
       <div className="mono-shell">
         <h2 className="text-3xl sm:text-5xl mono-title">Achievements.</h2>
         <p className="mt-4 mono-muted mb-12 max-w-3xl">
-        My journey is marked by innovation, leadership, and a passion for
-        empowering others through technology and education.
+          My journey is marked by innovation, leadership, and a passion for
+          empowering others through technology and education.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievements.map((ach, idx) => (
@@ -85,7 +85,9 @@ export default function Achievements() {
               <div className="font-semibold text-black/70 mb-2 whitespace-pre-line">
                 {ach.subtitle}
               </div>
-              <div className="mono-muted text-sm leading-relaxed">{ach.desc}</div>
+              <div className="mono-muted text-sm leading-relaxed">
+                {ach.desc}
+              </div>
             </motion.div>
           ))}
         </div>

@@ -53,7 +53,9 @@ export default function Blog() {
               onClick={() => setOpenIndex(i)}
             >
               <div className="flex items-center justify-between gap-3">
-                <div className="text-sm font-semibold text-black/60">{p.date}</div>
+                <div className="text-sm font-semibold text-black/60">
+                  {p.date}
+                </div>
                 <div className="text-sm font-semibold text-black/60">
                   {p.minutes} min
                 </div>
@@ -85,14 +87,19 @@ export default function Blog() {
                 <span className="mono-pill">{openPost.date}</span>
                 <span className="mono-pill">{openPost.minutes} min read</span>
                 <span className="mono-pill">
-                  <span className="accent-dot accent-dot--green" aria-hidden="true" />
+                  <span
+                    className="accent-dot accent-dot--green"
+                    aria-hidden="true"
+                  />
                   Draft
                 </span>
               </div>
               <h3 className="mt-4 text-2xl sm:text-3xl mono-title">
                 {openPost.title}
               </h3>
-              <p className="mt-4 mono-muted leading-relaxed">{openPost.content}</p>
+              <p className="mt-4 mono-muted leading-relaxed">
+                {openPost.content}
+              </p>
               <div className="mt-6 mono-muted text-sm">
                 Replace these with real posts when ready.
               </div>

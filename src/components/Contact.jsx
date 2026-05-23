@@ -107,10 +107,7 @@ export function Contact() {
                 ref={messageRef}
                 required
               />
-              <button
-                type="submit"
-                className="w-full mono-button"
-              >
+              <button type="submit" className="w-full mono-button">
                 Send Message
               </button>
             </form>
